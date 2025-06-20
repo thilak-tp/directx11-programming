@@ -1,2 +1,2 @@
-# directx11-programming
-This repo contains me learning directx11
+# DirectX11 - Graphics Programming
+This repo contains me learning Directx11
