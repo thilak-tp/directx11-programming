@@ -9,6 +9,6 @@ void ErrorLogger::Log(std::string msg) {
 
 void ErrorLogger::Log(HRESULT hr, std::string msg) {
 	_com_error error(hr);
-	std::wstring errorMsg = L"Error: " + std::wstring(error.ErrorMessage()) + L"\n" + StringConvertor::ToWString(msg) + L"\n";
+	std::wstring errorMsg = L"Error: " + StringConvertor::ToWString(msg) + L"\n" + std::wstring(error.ErrorMessage());
 	MessageBoxW(NULL, errorMsg.c_str(), L"Error", MB_ICONERROR);
 }

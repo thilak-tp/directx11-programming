@@ -106,6 +106,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Projects\C++ Development\Graphics Programming\directx11\projects\repo\directx11-programming\programs\dx11-Engine-VS2022\dx11-Engine-VS2022\libs\x64\Release</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -123,8 +124,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="error-logger.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="string-convertor.cpp" />
     <ClCompile Include="string-convertor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="error-logger.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

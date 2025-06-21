@@ -21,4 +21,5 @@ void ErrorLogger::Log(HRESULT hr, std::string msg) {
 	MessageBoxW(NULL, errorMsg.c_str(), L"Error", MB_ICONERROR);
 }
 ```
-Here we are using the comdef for the _com_error class that will resolve the error hr that we get from windows into an error message that we used to print the error message in a MessageBox
+Here we are using the comdef.h header for the _com_error class that will resolve the error hr that we get from windows into an error message that we used to print the error message in a MessageBox
+- if(FAILED(hr)) is used to check if the hr failed, if it did we can write the error log in the if condition. Similarly if(SUCCEEDED(hr)) checks if the hr succeeeded, and if so, we can write the success log in the if condition.
