@@ -130,6 +130,7 @@
     <ClCompile Include="render-window.cpp" />
     <ClCompile Include="string-convertor.cpp" />
     <ClCompile Include="string-convertor.h" />
+    <ClCompile Include="window-container.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine.h" />

@@ -2,7 +2,7 @@
 
 // Initialize window class and create a window
 bool Engine::initialize(HINSTANCE hInstance, std::string windowTitle, std::string windowClass, int width, int height) {
-	return this->renderWindow.initializeWindow(hInstance, windowTitle, windowClass, width, height);
+	return this->renderWindow.initializeWindow(this, hInstance, windowTitle, windowClass, width, height);
 }
 
 // Process messages from the window

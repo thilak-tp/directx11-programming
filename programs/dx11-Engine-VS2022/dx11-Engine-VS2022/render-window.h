@@ -1,6 +1,6 @@
 #pragma once
 #include "error-logger.h"
-
+class WindowContainer;
 class RenderWindow {
 
 	// Registering the WNDCLASSEX class
@@ -16,7 +16,7 @@ class RenderWindow {
 
 public:
 	// Initialize window class and create a window
-	bool initializeWindow(HINSTANCE hInstance, std::string windowTitle, std::string windowClass, int width, int height);
+	bool initializeWindow(WindowContainer* pWindowContainer, HINSTANCE hInstance, std::string windowTitle, std::string windowClass, int width, int height);
 	// Process messages from the window
 	bool processMessages();
 	// Unregister and destroy the window
