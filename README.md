@@ -42,3 +42,4 @@ bool initializeWindow(HINSTANCE hInstance, std::string windowTitle, std::string 
 bool processMessages();
 ~RenderWindow();
 ```
+- We Define a Custum windowProc() function to handle msges. In which WM_CHAR: wParam can we used to get the character that was pressed, either capital or small while using WM_KEYDOWN lparam is used to check for key press and which key pressed ignoring the case. WM_CHAR is useful where letter case is to be used and WM_KEYDOWN can be used to check for the keypress for example characte movement.

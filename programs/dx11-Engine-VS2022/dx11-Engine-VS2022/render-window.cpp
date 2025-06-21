@@ -1,4 +1,4 @@
-#include "render-window.h"
+#include "window-container.h"
 
 
 bool RenderWindow::initializeWindow(HINSTANCE hInstance, std::string windowTitle, std::string windowClass, int width, int height) {
@@ -34,10 +34,27 @@ bool RenderWindow::initializeWindow(HINSTANCE hInstance, std::string windowTitle
 	return true;
 }
 
+LRESULT CALLBACK windowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
+	unsigned char letter;
+	unsigned char keyCode;
+
+	switch (uMsg) {
+	case WM_CHAR: 
+		letter = static_cast<unsigned char> (wParam); 
+		return 0;
+	case WM_KEYDOWN: 
+		keyCode = static_cast<unsigned char> (lParam); 
+		return 0;
+	default: 
+		return DefWindowProc(hwnd, uMsg, wParam, lParam);
+	}
+	
+}
+
 void RenderWindow::registerWindowClass() {
 	WNDCLASSEX wc; // This is to be filled before Window creation
 	wc.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;//Redraw when width, height change
-	wc.lpfnWndProc = DefWindowProc;
+	wc.lpfnWndProc = windowProc;
 	wc.cbSize = sizeof(WNDCLASSEX);
 	wc.hInstance = this->hInstance;
 	wc.hCursor = LoadCursor(nullptr, IDC_ARROW);

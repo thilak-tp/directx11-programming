@@ -124,6 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="engine.cpp" />
     <ClCompile Include="error-logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="render-window.cpp" />
@@ -131,8 +132,10 @@
     <ClCompile Include="string-convertor.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="engine.h" />
     <ClInclude Include="error-logger.h" />
     <ClInclude Include="render-window.h" />
+    <ClInclude Include="window-container.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

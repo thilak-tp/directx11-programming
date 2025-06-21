@@ -30,12 +30,21 @@
     <ClCompile Include="render-window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="error-logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="render-window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="window-container.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
