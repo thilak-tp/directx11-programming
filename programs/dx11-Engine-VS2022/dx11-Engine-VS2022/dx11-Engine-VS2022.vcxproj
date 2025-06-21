@@ -126,11 +126,13 @@
   <ItemGroup>
     <ClCompile Include="error-logger.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="render-window.cpp" />
     <ClCompile Include="string-convertor.cpp" />
     <ClCompile Include="string-convertor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="error-logger.h" />
+    <ClInclude Include="render-window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
